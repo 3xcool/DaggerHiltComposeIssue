@@ -69,6 +69,7 @@ private fun NavGraphBuilder.addMainGraph(
       MainFeatureScreen(
         navController = navController,
         state= viewModel.state,
+        viewModel
       ){
         navController.navigate(MainRoutes.Home.route){
           popUpTo(MainRoutes.MainFeature.route) {
@@ -78,7 +79,7 @@ private fun NavGraphBuilder.addMainGraph(
       }
     }
     
-    // addFeature1Routes(navController, MainRoutes.Home.route)
+    // addFeature1Routes(navController, MainRoutes.Home.route) //this command is not needed, just implement module at gradle
     addFeatureOuterRoutes(navController, MainRoutes.Home.route)
     addFeaturesRoutes(navController, MainRoutes.Home.route)
   }

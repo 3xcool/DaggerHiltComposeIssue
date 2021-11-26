@@ -7,6 +7,10 @@ import org.gradle.api.artifacts.dsl.DependencyHandler
  */
 object BundleCommon {
   fun DependencyHandler.bundleCommon() {
+    add("implementation", WorkManager.runtime)
+    add("implementation", WorkManager.ktx)
+    add("implementation", WorkManager.hilt)
+    add("kapt", WorkManager.compiler)
     add("implementation", Hilt.android)
     add("kapt", Hilt.compiler)
     add("implementation", Kotlinx.coroutinesCore)

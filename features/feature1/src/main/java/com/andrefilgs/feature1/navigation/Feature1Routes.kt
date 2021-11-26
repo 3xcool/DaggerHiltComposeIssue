@@ -1,8 +1,6 @@
 package com.andrefilgs.feature1.navigation
 
-import androidx.hilt.navigation.compose.hiltNavGraphViewModel
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModelStoreOwner
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NamedNavArgument
@@ -33,6 +31,6 @@ fun NavGraphBuilder.addFeature1Routes(
     // val viewModel: Feature1ViewModel= hiltViewModel(navController.getBackStackEntry(route=comingRoute))
     // val viewModel: Feature1ViewModel= hiltViewModel(navController.graph.parent!!.id)
     // val viewModel: Feature1ViewModel= hiltViewModel(navBackStackEntry.viewModelStore)
-    Feature1Screen(viewModel.state)
+    Feature1Screen(viewModel.state, viewModel)
   }
 }

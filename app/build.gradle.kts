@@ -94,7 +94,7 @@ dependencies {
   implementation(project(Modules.core))
   implementation(project(Modules.features))
   implementation(project(Modules.featureouter))
-  implementation(project(Modules.feature1)) //ATTENTION, must import feature1 here for ViewModel with parameter
+  // implementation(project(Modules.feature1)) //ATTENTION, must import feature1 here for ViewModel with parameter
   bundleAndroidX()
   bundleCommon()
   bundleCompose()
